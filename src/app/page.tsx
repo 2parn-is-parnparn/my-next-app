@@ -1,4 +1,3 @@
-// pages/index.js หรือ app/page.js
 import Header from "@/app/components/Header";
 
 export default function Home() {
