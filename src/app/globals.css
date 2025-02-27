@@ -4,6 +4,7 @@
   --accent: #2a2a2a;
   --hover: #f2f2f2;
   --text-secondary: #838383;
+  --border-light: #e2e2e2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,9 +14,11 @@
     --accent: #d4d4d4;
     --hover: #1a1a1a;
     --text-secondary: #a0a0a0;
+    --border-light: #333333;
   }
 }
 
+/* Base Styles */
 body {
   color: var(--foreground);
   background: var(--background);
@@ -35,6 +38,15 @@ main {
   padding: 3rem 1.5rem;
 }
 
+/* Section Title - Used across multiple sections */
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--foreground);
+}
+
 /* Hero Section */
 .hero {
   display: flex;
@@ -43,6 +55,7 @@ main {
   justify-content: space-between;
   gap: 2rem;
   margin-bottom: 4rem;
+  animation: fadeIn 0.8s ease forwards;
 }
 
 .hero-content {
@@ -88,15 +101,6 @@ main {
 .myImage:hover {
   filter: grayscale(0%);
   transform: scale(1.03);
-}
-
-/* Section Title */
-.section-title {
-  font-size: 1.875rem;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--foreground);
 }
 
 /* Education Section */
@@ -150,11 +154,147 @@ main {
   margin: 0.5rem 0;
 }
 
-/* Projects Grid */
+/* Skills Section */
+.skills-section {
+  margin-bottom: 4rem;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.15s;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.skills-category {
+  border: 1px solid var(--foreground);
+  padding: 2rem;
+  background-color: var(--background);
+  transition: all 0.3s ease;
+}
+
+.skills-category:hover {
+  background-color: var(--hover);
+  transform: translateY(-5px);
+}
+
+.skills-category-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.skills-category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--foreground);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background-color: var(--background);
+  border: 1px solid var(--foreground);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.skills-list li:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+  transform: translateY(-2px);
+}
+
+/* Experience Section */
+.experience-section {
+  margin-bottom: 4rem;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.experience-card {
+  padding: 2rem;
+  border-left: 3px solid var(--foreground);
+  background-color: var(--background);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.experience-card:hover {
+  background-color: var(--hover);
+  transform: translateX(5px);
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.experience-company-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.company {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.position {
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.project-name {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.75rem;
+  color: var(--foreground);
+}
+
+.responsibilities {
+  margin: 1rem 0 0;
+  padding-left: 1.5rem;
+}
+
+.responsibilities li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Projects Section */
+.projects-section {
+  margin-bottom: 4rem;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.25s;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.3s;
 }
 
 /* Project Cards */
@@ -221,7 +361,7 @@ main {
 
 /* Footer */
 footer {
-  border-top: 1px solid #e2e2e2;
+  border-top: 1px solid var(--border-light);
   padding: 2.5rem 0;
   text-align: center;
 }
@@ -235,14 +375,6 @@ footer p {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-.hero, .projects-grid {
-  animation: fadeIn 0.8s ease forwards;
-}
-
-.projects-grid {
-  animation-delay: 0.2s;
 }
 
 /* Media Queries for Responsive Design */
@@ -259,7 +391,17 @@ footer p {
     grid-template-columns: 1fr 1fr;
   }
   
-  .education-header {
+  .skills-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .education-header, .experience-company-section {
     flex-wrap: nowrap;
+  }
+  
+  .experience-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
   }
 }

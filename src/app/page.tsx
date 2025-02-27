@@ -20,50 +20,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
-       
-        
-        <h2 className="section-title">Academic Projects</h2>
-        
-        <div className="projects-grid">
-          <div className="myCard">
-            <div className="card-content">
-              <h3 className="project-title">ART TROVERT</h3>
-              <h4 className="project-subtitle">INTERACTIVE SYSTEMS PROJECT</h4>
-              <p className="project-description">Art marketplace designed through UX research, competitive analysis, and Figma prototyping to enhance user engagement</p>
-              <button className="myButton">VIEW PROJECT</button>
-            </div>
-          </div>
-          
-          <div className="myCard">
-            <div className="card-content">
-              <h3 className="project-title">MEDI SCAN</h3>
-              <h4 className="project-subtitle">AI COURSE PROJECT</h4>
-              <p className="project-description">AI-powered medicine recognition system using YOLO, LINE API, and Dialogflow for medication identification and information retrieval</p>
-              <button className="myButton">VIEW PROJECT</button>
-            </div>
-          </div>
 
-          <div className="myCard">
-            <div className="card-content">
-              <h3 className="project-title">TEAM MORTAL</h3>
-              <h4 className="project-subtitle">SOFTWARE DESIGN PROJECT</h4>
-              <p className="project-description">Gamer matchmaking platform built with React.js/Node.js; implemented UX/UI design principles and comprehensive software documentation</p>
-              <button className="myButton">VIEW PROJECT</button>
-            </div>
-          </div>
-          
-          <div className="myCard">
-            <div className="card-content">
-              <h3 className="project-title">BOTTLE BANK</h3>
-              <h4 className="project-subtitle">IOT IMPLEMENTATION PROJECT</h4>
-              <p className="project-description">Smart recycling machine integrating Arduino sensors, web application, and Firebase for real-time monitoring and data collection</p>
-              <button className="myButton">VIEW PROJECT</button>
-            </div>
-          </div>
-        </div>
-
-         <section className="education-section">
+        <section className="education-section">
           <h2 className="section-title">Education</h2>
           <div className="education-card">
             <div className="education-header">
@@ -72,6 +30,104 @@ export default function Home() {
             </div>
             <p className="degree">School of Science in Computer Science, 2.96 GPA</p>
             <p className="duration">2021 – Present</p>
+          </div>
+        </section>
+        
+        <section className="skills-section">
+          <h2 className="section-title">Skills</h2>
+          <div className="skills-container">
+            <div className="skills-category">
+              <h3 className="skills-category-title">Hard Skills</h3>
+              <ul className="skills-list">
+                <li>Figma</li>
+                <li>Adobe Photoshop</li>
+                <li>Usability Testing</li>
+                <li>Persona Creation</li>
+                <li>Journey Mapping</li>
+                <li>Interactive Prototypes</li>
+                <li>Wireframing</li>
+                <li>User Flow Diagrams</li>
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+            
+            <div className="skills-category">
+              <h3 className="skills-category-title">Soft Skills</h3>
+              <ul className="skills-list">
+                <li>Team Collaboration</li>
+                <li>Effective Communication</li>
+                <li>Project Management</li>
+                <li>Creative Problem-Solving</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="experience-section">
+          <h2 className="section-title">Experience</h2>
+          <div className="experience-card">
+            <div className="experience-header">
+              <div className="experience-company-section">
+                <h3 className="company">Ascend Group</h3>
+              </div>
+              <span className="location">Bangkok, Thailand</span>
+
+            </div>
+            <div className="experience-company-section">
+            <p className="position">TechOps Team Internship, Ascend Money</p>
+            <span className="duration">January 8, 2024 – June 28, 2024</span>
+            </div>
+            
+            <h4 className="project-name">Machine Learning-Based Issue Detection in Jenkins Pipeline</h4>
+            <ul className="responsibilities">
+              <li>Developed an ML-powered system to analyze and predict issues in CI/CD pipelines using Jenkins logs</li>
+              <li>Built predictive models with Python, scikit-learn, and Jupyter Notebook</li>
+              <li>Explored and implemented Docker, Kubernetes (EKS), and AWS (EC2, S3) for deployment and scalability</li>
+              <li>Integrated MongoDB and AWS DocumentDB for log storage and processing</li>
+              <li>Created a Next.js-based web dashboard to display predictions, statistics, and troubleshooting recommendations</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section className="projects-section">
+          <h2 className="section-title">Academic Projects</h2>
+          <div className="projects-grid">
+            <div className="myCard">
+              <div className="card-content">
+                <h3 className="project-title">ART TROVERT</h3>
+                <h4 className="project-subtitle">INTERACTIVE SYSTEMS PROJECT</h4>
+                <p className="project-description">Art marketplace designed through UX research, competitive analysis, and Figma prototyping to enhance user engagement</p>
+                <button className="myButton">VIEW PROJECT</button>
+              </div>
+            </div>
+            
+            <div className="myCard">
+              <div className="card-content">
+                <h3 className="project-title">MEDI SCAN</h3>
+                <h4 className="project-subtitle">AI COURSE PROJECT</h4>
+                <p className="project-description">AI-powered medicine recognition system using YOLO, LINE API, and Dialogflow for medication identification and information retrieval</p>
+                <button className="myButton">VIEW PROJECT</button>
+              </div>
+            </div>
+
+            <div className="myCard">
+              <div className="card-content">
+                <h3 className="project-title">TEAM MORTAL</h3>
+                <h4 className="project-subtitle">SOFTWARE DESIGN PROJECT</h4>
+                <p className="project-description">Gamer matchmaking platform built with React.js/Node.js; implemented UX/UI design principles and comprehensive software documentation</p>
+                <button className="myButton">VIEW PROJECT</button>
+              </div>
+            </div>
+            
+            <div className="myCard">
+              <div className="card-content">
+                <h3 className="project-title">BOTTLE BANK</h3>
+                <h4 className="project-subtitle">IOT IMPLEMENTATION PROJECT</h4>
+                <p className="project-description">Smart recycling machine integrating Arduino sensors, web application, and Firebase for real-time monitoring and data collection</p>
+                <button className="myButton">VIEW PROJECT</button>
+              </div>
+            </div>
           </div>
         </section>
       </main>
