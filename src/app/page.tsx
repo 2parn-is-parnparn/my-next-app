@@ -1,9 +1,12 @@
-import Navbar from "@/app/components/navbar";
+import Navbar from "./components/navbar";
+
 
 export default function Home() {
   return (
     <div className="container">
-      <Navbar></Navbar>
+      {/* <Header /> */}
+
+      <Navbar/>
     
       <main>
         <section id="about" className="hero">
