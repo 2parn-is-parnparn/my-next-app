@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 
-export default function Navbar() {
+export default function navBar() {
   useEffect(() => {
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle') as HTMLElement;

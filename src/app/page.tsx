@@ -1,13 +1,9 @@
-import Navbar from "./components/navbar";
-
+import Navbar from "@/app/components/navBar";
 
 export default function Home() {
   return (
     <div className="container">
-      {/* <Header /> */}
-
-      <Navbar/>
-    
+      <Navbar />
       <main>
         <section id="about" className="hero">
           <div className="profile-container">
