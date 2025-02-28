@@ -27,7 +27,7 @@ export default function Home() {
         </section>
 
         <section id="skills" className="skills-section">
-          <h2 className="section-title">Demo</h2>
+          <h2 className="section-title">Animated Preview</h2>
           {/* <img className="kinclean_img" src="kinclean1.gif" alt="" /> */}
           <video src="kinclean_video.mp4" autoPlay muted loop playsinline></video>
 
