@@ -28,8 +28,8 @@ export default function Home() {
 
         <section id="skills" className="skills-section">
           <h2 className="section-title">Animated Preview</h2>
-          {/* <img className="kinclean_img" src="kinclean1.gif" alt="" /> */}
-          <video src="kinclean_video.mp4" autoPlay muted loop playsinline></video>
+          <img className="kinclean_img" src="kinclean1.gif" alt="" />
+          {/* <video src="kinclean_video.mp4" autoPlay muted loop playsinline></video> */}
 
 
         </section>
