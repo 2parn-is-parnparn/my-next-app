@@ -17,7 +17,7 @@ export default function Navbar({ currentPageName }: NavbarProps) {
     if (currentPageName) {
       setCurrentPage(currentPageName);
     } else if (pathname === '/') {
-      setCurrentPage('Home');
+      setCurrentPage('Home'); // ตั้งเป็น Home แทนที่จะเป็น "/"
     } else {
       // ถ้าไม่ได้กำหนดชื่อหน้าและไม่ใช่หน้าหลัก ใช้ส่วนสุดท้ายของ URL
       const pageName = pathname.split('/').pop() || '';
@@ -74,12 +74,15 @@ export default function Navbar({ currentPageName }: NavbarProps) {
     }
   }, [pathname, currentPageName]);
 
+  // ไม่แสดงชื่อหน้าถ้าอยู่ที่หน้า Home หรือถ้า currentPage เป็น "Home"
+  const showPageName = currentPage !== 'Home' && pathname !== '/';
+
   return (
     <nav className="navbar">
       <div className="navbar-content">
         <div className="navbar-left">
           <Link href="/" className="navbar-logo">ND</Link>
-          {currentPage !== 'Home' && (
+          {showPageName && (
             <span className="current-page">{currentPage}</span>
           )}
         </div>
