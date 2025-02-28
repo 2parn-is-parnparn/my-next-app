@@ -60,8 +60,16 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
   animation: fadeIn 0.8s ease forwards;
+}
+
+.kinclean_img {
+  border-radius: 20px;
+}
+
+.bio#projectcaption {
+  max-width:max-content;
 }
 
 .hero-content {
@@ -103,6 +111,12 @@ main {
   height: 100%;
   object-fit: cover;
 }
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 
 .myImage:hover {
   filter: grayscale(100%);
@@ -458,6 +472,7 @@ footer p {
   transition: all 0.2s ease;
   position: relative;
   padding: 0.5rem 0;
+  
 }
 
 .navbar-menu li a::after {
@@ -473,6 +488,27 @@ footer p {
 
 .navbar-menu li a:hover::after {
   width: 100%;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.current-page {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.current-page::before {
+  content: '/';
+  position: absolute;
+  left: 0;
+  color: var(--text-secondary);
 }
 
 /* Mobile menu toggle */

@@ -1,9 +1,29 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-export default function navBar() {
+// ประเภทสำหรับ props ที่ส่งเข้ามา
+type NavbarProps = {
+  currentPageName?: string; // ชื่อหน้าปัจจุบัน (ถ้ามี)
+};
+
+export default function Navbar({ currentPageName }: NavbarProps) {
+  const pathname = usePathname();
+  const [currentPage, setCurrentPage] = useState('');
+  
   useEffect(() => {
+    // ตั้งค่าชื่อหน้าปัจจุบันตาม URL
+    if (currentPageName) {
+      setCurrentPage(currentPageName);
+    } else if (pathname === '/') {
+      setCurrentPage('Home');
+    } else {
+      // ถ้าไม่ได้กำหนดชื่อหน้าและไม่ใช่หน้าหลัก ใช้ส่วนสุดท้ายของ URL
+      const pageName = pathname.split('/').pop() || '';
+      setCurrentPage(pageName.charAt(0).toUpperCase() + pageName.slice(1));
+    }
+    
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle') as HTMLElement;
     const navbarMenu = document.querySelector('.navbar-menu') as HTMLElement;
@@ -43,35 +63,37 @@ export default function navBar() {
       // Clean up event listener
       return () => {
         window.removeEventListener('scroll', handleScroll);
+        
+        if (menuToggle && navbarMenu) {
+          menuToggle.removeEventListener('click', () => {});
+        }
+        navLinks.forEach(link => {
+          link.removeEventListener('click', () => {});
+        });
       };
     }
-    
-    // Clean up other event listeners
-    return () => {
-      if (menuToggle && navbarMenu) {
-        menuToggle.removeEventListener('click', () => {});
-      }
-      navLinks.forEach(link => {
-        link.removeEventListener('click', () => {});
-      });
-    };
-  }, []);
+  }, [pathname, currentPageName]);
 
   return (
     <nav className="navbar">
       <div className="navbar-content">
-        <div className="navbar-logo">ND</div>
+        <div className="navbar-left">
+          <Link href="/" className="navbar-logo">ND</Link>
+          {currentPage !== 'Home' && (
+            <span className="current-page">{currentPage}</span>
+          )}
+        </div>
         <div className="menu-toggle">
           <span></span>
           <span></span>
           <span></span>
         </div>
         <ul className="navbar-menu">
-          <li><Link href="#about">About</Link></li>
-          <li><Link href="#education">Education</Link></li>
-          <li><Link href="#skills">Skills</Link></li>
-          <li><Link href="#experience">Experience</Link></li>
-          <li><Link href="#projects">Projects</Link></li>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/#education">Education</Link></li>
+          <li><Link href="/#skills">Skills</Link></li>
+          <li><Link href="/#experience">Experience</Link></li>
+          <li><Link href="/#projects">Projects</Link></li>
         </ul>
       </div>
     </nav>

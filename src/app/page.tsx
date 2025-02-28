@@ -1,7 +1,16 @@
+"use client";
 import Navbar from "@/app/components/Navbar";
+import { useRouter } from "next/navigation";
 
 
 export default function Home() {
+
+  const router = useRouter();
+
+  const navigateTo = (path: string) => {
+    router.push(path);
+  };
+
   return (
     <div className="container">
       <Navbar />
@@ -33,7 +42,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section  id="skills"className="skills-section">
+        <section id="skills" className="skills-section">
           <h2 className="section-title">Skills</h2>
           <div className="skills-container">
             <div className="skills-category">
@@ -90,7 +99,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects"  className="projects-section">
+        <section id="projects" className="projects-section">
           <h2 className="section-title">Academic Projects</h2>
           <div className="projects-grid">
             <div className="myCard">
@@ -98,7 +107,7 @@ export default function Home() {
                 <h3 className="project-title">ARTTROVERT</h3>
                 <h4 className="project-subtitle">INTERACTIVE SYSTEMS PROJECT</h4>
                 <p className="project-description">Art marketplace designed through UX research, competitive analysis, and Figma prototyping to enhance user engagement</p>
-                <button className="myButton">VIEW PROJECT</button>
+                <button className="myButton" onClick={() => navigateTo("/arttrovert")}>VIEW PROJECT</button>
               </div>
             </div>
 
@@ -107,7 +116,7 @@ export default function Home() {
                 <h3 className="project-title">MEDISCAN</h3>
                 <h4 className="project-subtitle">AI COURSE PROJECT</h4>
                 <p className="project-description">AI-powered medicine recognition system using YOLO, LINE API, and Dialogflow for medication identification and information retrieval</p>
-                <button className="myButton">VIEW PROJECT</button>
+                <button className="myButton" onClick={() => navigateTo("/arttrovert")}>VIEW PROJECT</button>
               </div>
             </div>
 
@@ -116,7 +125,7 @@ export default function Home() {
                 <h3 className="project-title">TEAMMORTAL</h3>
                 <h4 className="project-subtitle">SOFTWARE DESIGN PROJECT</h4>
                 <p className="project-description">Gamer matchmaking platform built with React.js/Node.js; implemented UX/UI design principles and comprehensive software documentation</p>
-                <button className="myButton">VIEW PROJECT</button>
+                <button className="myButton" onClick={() => navigateTo("/arttrovert")}>VIEW PROJECT</button>
               </div>
             </div>
 
@@ -125,9 +134,31 @@ export default function Home() {
                 <h3 className="project-title">BOTTLE BANK</h3>
                 <h4 className="project-subtitle">IOT IMPLEMENTATION PROJECT</h4>
                 <p className="project-description">Smart recycling machine integrating Arduino sensors, web application, and Firebase for real-time monitoring and data collection</p>
-                <button className="myButton">VIEW PROJECT</button>
+                <button className="myButton" onClick={() => navigateTo("/arttrovert")}>VIEW PROJECT</button>
+              </div>
+
+              
+            </div>
+
+            <div className="myCard">
+              <div className="card-content">
+                <h3 className="project-title">กินคลีนกัน</h3>
+                <h4 className="project-subtitle">Human-Computer Interaction Group Project</h4>
+                <p className="project-description">Clean eating website designed with Figma, focusing on user-friendly UI/UX and interactive meal planning for a healthier lifestyle</p>
+                <button className="myButton" onClick={() => navigateTo("/kinclean")}>VIEW PROJECT</button>
               </div>
             </div>
+
+
+            <div className="myCard">
+              <div className="card-content">
+                <h3 className="project-title">NudMhor</h3>
+                <h4 className="project-subtitle">ANDROID MOBILE APPLICATION PROGRAMMING Group Project</h4>
+                <p className="project-description">Designed in Figma for development</p>
+                <button className="myButton" onClick={() => navigateTo("/nudmhor")}>VIEW PROJECT</button>
+              </div>
+            </div>
+
           </div>
         </section>
       </main>
