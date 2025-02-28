@@ -1,13 +1,22 @@
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
   --accent: #2a2a2a;
   --hover: #f2f2f2;
   --text-secondary: #838383;
   --border-light: #e2e2e2;
+} */
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --accent: #d4d4d4;
+  --hover: #1a1a1a;
+  --text-secondary: #a0a0a0;
+  --border-light: #333333;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -16,7 +25,7 @@
     --text-secondary: #a0a0a0;
     --border-light: #333333;
   }
-}
+} */
 
 /* Base Styles */
 body {
