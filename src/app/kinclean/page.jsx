@@ -2,15 +2,11 @@
 
 import Navbar from "@/app/components/Navbar";
 
-
 export default function Home() {
   return (
     <div className="container">
-      <Navbar />
+      <Navbar currentPageName="กินคลีนกัน" />
       <main>
-
-              <Navbar currentPageName="กินคลีนกัน" />
-
         <div className="hero-content">
           <h1 className="name">เว็บไซต์-กินคลีนกัน</h1>
           <button
@@ -25,21 +21,18 @@ export default function Home() {
           </p>
         </div>
         <section id="about" className="hero">
-
-
           <section id="education" className="education-section">
             <img src="kinclean1.png" alt="" />
           </section>
-
         </section>
-
-
 
         <section id="skills" className="skills-section">
           <h2 className="section-title">Demo</h2>
-          <img className="kinclean_img" src="kinclean1.gif" alt="" />
-        </section>
+          {/* <img className="kinclean_img" src="kinclean1.gif" alt="" /> */}
+          <video src="kinclean_video.mp4" autoPlay muted loop playsinline></video>
 
+
+        </section>
       </main>
 
       <footer>

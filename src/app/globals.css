@@ -504,6 +504,14 @@ footer p {
   padding-left: 1rem;
 }
 
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; 
+}
+
+
 .current-page::before {
   content: '/';
   position: absolute;
