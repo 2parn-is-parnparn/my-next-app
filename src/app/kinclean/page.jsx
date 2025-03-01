@@ -8,7 +8,7 @@ export default function Home() {
       <Navbar currentPageName="กินคลีนกัน" />
       <main>
         <div className="hero-content">
-          <h1 className="name">เว็บไซต์-กินคลีนกัน</h1>
+          <h1 className="name">กินคลีนกัน</h1>
           <button
             className="myButton"
             onClick={() => window.open("https://www.figma.com/proto/0nIr5HvG9aUX3AAfJfCXlI/HCI-Copy?node-id=72-18&p=f&t=dIubL3YZ0kn8mikk-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1230%3A13692", "_blank")}

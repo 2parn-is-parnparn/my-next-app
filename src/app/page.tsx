@@ -159,6 +159,15 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="myCard">
+              <div className="card-content">
+                <h3 className="project-title">Espressoul</h3>
+                <h4 className="project-subtitle">Human-Computer Interaction Individual Project</h4>
+                <p className="project-description">Designed in Figma for development</p>
+                <button className="myButton" onClick={() => navigateTo("/espressoul")}>VIEW PROJECT</button>
+              </div>
+            </div>
+
           </div>
         </section>
       </main>

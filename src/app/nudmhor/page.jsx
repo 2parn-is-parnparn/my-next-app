@@ -1,16 +1,26 @@
 "use client"
 
+import { useState } from "react";
 import Navbar from "@/app/components/Navbar";
 import Link from 'next/link';
 
-
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
+  const [currentImage, setCurrentImage] = useState("");
+
+  const openModal = (imageSrc) => {
+    setCurrentImage(imageSrc);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="container">
-      <Navbar />
       <main>
-
-      <Navbar currentPageName="NudMhor" />
+        <Navbar currentPageName="NudMhor" />
 
         <div className="hero-content">
           <h1 className="name">NudMhor</h1>
@@ -27,17 +37,62 @@ export default function Home() {
         </div>
         <section id="about" className="hero">
 
+          <img
+            className=""
+            src="nudmhor1.png"
+            alt="NudMhor app interface"
+          />
         </section>
-
-
 
         <section id="skills" className="skills-section">
           <h2 className="section-title">App Interface Preview</h2>
-          <img className="kinclean_img" src="nudmhor1.png" alt="" />
-          <img className="kinclean_img" src="nudmhor2.png" alt="" />
-        </section>
 
+          {/* แถวที่ 1 */}
+          <div className="image-row">
+            <div className="image-gallery">
+              <img
+                className="kinclean_img thumbnail"
+                src="nudmhor2.png"
+                alt="NudMhor app interface"
+                onClick={() => openModal("nudmhor2.png")}
+              />
+              <img
+                className="kinclean_img thumbnail"
+                src="nudmhor3.png"
+                alt="NudMhor app interface"
+                onClick={() => openModal("nudmhor3.png")}
+              />
+              <img
+                className="kinclean_img thumbnail"
+                src="nudmhor4.png"
+                alt="NudMhor app interface"
+                onClick={() => openModal("nudmhor4.png")}
+              />      <img
+                className="kinclean_img thumbnail"
+                src="nudmhor5.png"
+                alt="NudMhor app interface"
+                onClick={() => openModal("nudmhor5.png")}
+              />      <img
+                className="kinclean_img thumbnail"
+                src="nudmhor6.png"
+                alt="NudMhor app interface"
+                onClick={() => openModal("nudmhor6.png")}
+              />
+            </div>
+          </div>
+
+        </section>
       </main>
+
+      {/* Image Modal */}
+      {showModal && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal}>×</button>
+            <img src={currentImage} alt="Full size view" className="modal-image" />
+          </div>
+        </div>
+      )}
 
       <footer>
         <p>© 2025 Narin Dapradit. All rights reserved.</p>
