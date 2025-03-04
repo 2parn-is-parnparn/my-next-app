@@ -7,9 +7,71 @@ export default function Home() {
 
   const router = useRouter();
 
-  const navigateTo = (path: string) => {
-    router.push(path);
+  const navigateTo = (path?: string) => {
+    if (path) {
+      router.push(path);
+    }
   };
+
+  const projects = [
+    {
+      title: "TEAMMORTAL",
+      subtitle: "SOFTWARE DESIGN PROJECT",
+      mainDescription: "Gamer matchmaking platform built with React.js/Node.js; implemented UX/UI design principles and comprehensive software documentation",
+      detailPath: "/teammortal",
+      mainTechStack: ["React.js", "Node.js", "UI Design", "UX Research","Figma", "Prototyping"],
+      hasDetailPage: true
+    },
+    {
+      title: "ARTTROVERT",
+      subtitle: "INTERACTIVE SYSTEMS PROJECT",
+      mainDescription: "Art marketplace designed through UX research, competitive analysis, and Figma prototyping to enhance user engagement",
+      detailPath: "/arttrovert",
+      mainTechStack: ["Figma", "Prototyping","UI Design"],
+      hasDetailPage: true
+    },
+
+    {
+      title: "กินคลีนกัน",
+      subtitle: "HUMAN-COMPUTER INTERACTION GROUP PROJECT",
+      mainDescription: "Clean eating website designed with Figma, focusing on user-friendly UI/UX and interactive meal planning for a healthier lifestyle",
+      detailPath: "/kinclean",
+      mainTechStack: ["Figma", "UI Design","Prototyping"],
+      hasDetailPage: true
+    },
+    {
+      title: "NudMhor",
+      subtitle: "ANDROID MOBILE APPLICATION GROUP PROJECT",
+      mainDescription: "Mobile application designed in Figma with a focus on user experience and interface design",
+      detailPath: "/nudmhor",
+      mainTechStack: ["Android", "UI Design","Prototyping"],
+      hasDetailPage: true,
+    },
+    {
+      title: "Espressoul",
+      subtitle: "HUMAN-COMPUTER INTERACTION INDIVIDUAL PROJECT",
+      mainDescription: "Designed in Figma with a focus on user experience and interface design",
+      detailPath: "/espressoul",
+      mainTechStack: ["Figma",  "UI Design","Prototyping"],
+      hasDetailPage: true,
+    },
+    {
+      title: "MEDISCAN",
+      subtitle: "AI COURSE PROJECT",
+      mainDescription: "AI-powered medicine recognition system using YOLO, LINE API, and Dialogflow for medication identification and information retrieval",
+      mainTechStack: ["YOLO", "Python", "LINE API"],
+      hasDetailPage: false,
+      detailPath: undefined
+    },
+    {
+      title: "BOTTLE BANK",
+      subtitle: "IOT IMPLEMENTATION PROJECT",
+      mainDescription: "Smart recycling machine integrating Arduino sensors, web application, and Firebase for real-time monitoring and data collection",
+      mainTechStack: ["Arduino", "Firebase", "IoT"],
+      hasDetailPage: false,
+      detailPath: undefined
+    },
+  ];
 
   return (
     <div className="container">
@@ -30,17 +92,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="education" className="education-section">
-          <h2 className="section-title">Education</h2>
-          <div className="education-card">
-            <div className="education-header">
-              <h3 className="institution">King Mongkut's Institute of Technology Ladkrabang</h3>
-              <span className="location">Bangkok, Thailand</span>
-            </div>
-            <p className="degree">School of Science in Computer Science, 2.96 GPA</p>
-            <p className="duration">2021 – Present</p>
-          </div>
-        </section>
+
 
         <section id="skills" className="skills-section">
           <h2 className="section-title">Skills</h2>
@@ -73,6 +125,7 @@ export default function Home() {
           </div>
         </section>
 
+
         <section id="experience" className="experience-section">
           <h2 className="section-title">Experience</h2>
           <div className="experience-card">
@@ -102,74 +155,49 @@ export default function Home() {
         <section id="projects" className="projects-section">
           <h2 className="section-title">Academic Projects</h2>
           <div className="projects-grid">
-            <div className="myCard">
-              <div className="card-content">
-                <h3 className="project-title">ARTTROVERT</h3>
-                <h4 className="project-subtitle">INTERACTIVE SYSTEMS PROJECT</h4>
-                <p className="project-description">Art marketplace designed through UX research, competitive analysis, and Figma prototyping to enhance user engagement</p>
-                <button className="myButton" onClick={() => navigateTo("/arttrovert")}>VIEW PROJECT</button>
+            {projects.map((project, index) => (
+              <div key={index} className="myCard">
+                <div className="card-content">
+                  <h3 className="project-title">{project.title}</h3>
+                  <h4 className="project-subtitle">{project.subtitle}</h4>
+                  <div className="tech-stack">
+                    <div className="tech-stack-items">
+                      {project.mainTechStack.map((tech, techIndex) => (
+                        <span key={techIndex} className="tech-badge">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="project-description">{project.mainDescription}</p>
+                  
+
+                  
+                  {project.hasDetailPage && (
+                    <button 
+                      className="myButton" 
+                      onClick={() => navigateTo(project.detailPath)}
+                    >
+                      VIEW PROJECT
+                    </button>
+                  )}
+                </div>
               </div>
-            </div>
-
-            <div className="myCard">
-              <div className="card-content">
-                <h3 className="project-title">MEDISCAN</h3>
-                <h4 className="project-subtitle">AI COURSE PROJECT</h4>
-                <p className="project-description">AI-powered medicine recognition system using YOLO, LINE API, and Dialogflow for medication identification and information retrieval</p>
-                <button className="myButton" onClick={() => navigateTo("/arttrovert")}>VIEW PROJECT</button>
-              </div>
-            </div>
-
-            <div className="myCard">
-              <div className="card-content">
-                <h3 className="project-title">TEAMMORTAL</h3>
-                <h4 className="project-subtitle">SOFTWARE DESIGN PROJECT</h4>
-                <p className="project-description">Gamer matchmaking platform built with React.js/Node.js; implemented UX/UI design principles and comprehensive software documentation</p>
-                <button className="myButton" onClick={() => navigateTo("/arttrovert")}>VIEW PROJECT</button>
-              </div>
-            </div>
-
-            <div className="myCard">
-              <div className="card-content">
-                <h3 className="project-title">BOTTLE BANK</h3>
-                <h4 className="project-subtitle">IOT IMPLEMENTATION PROJECT</h4>
-                <p className="project-description">Smart recycling machine integrating Arduino sensors, web application, and Firebase for real-time monitoring and data collection</p>
-                <button className="myButton" onClick={() => navigateTo("/arttrovert")}>VIEW PROJECT</button>
-              </div>
-
-              
-            </div>
-
-            <div className="myCard">
-              <div className="card-content">
-                <h3 className="project-title">กินคลีนกัน</h3>
-                <h4 className="project-subtitle">Human-Computer Interaction Group Project</h4>
-                <p className="project-description">Clean eating website designed with Figma, focusing on user-friendly UI/UX and interactive meal planning for a healthier lifestyle</p>
-                <button className="myButton" onClick={() => navigateTo("/kinclean")}>VIEW PROJECT</button>
-              </div>
-            </div>
-
-
-            <div className="myCard">
-              <div className="card-content">
-                <h3 className="project-title">NudMhor</h3>
-                <h4 className="project-subtitle">ANDROID MOBILE APPLICATION PROGRAMMING Group Project</h4>
-                <p className="project-description">Designed in Figma for development</p>
-                <button className="myButton" onClick={() => navigateTo("/nudmhor")}>VIEW PROJECT</button>
-              </div>
-            </div>
-
-            <div className="myCard">
-              <div className="card-content">
-                <h3 className="project-title">Espressoul</h3>
-                <h4 className="project-subtitle">Human-Computer Interaction Individual Project</h4>
-                <p className="project-description">Designed in Figma for development</p>
-                <button className="myButton" onClick={() => navigateTo("/espressoul")}>VIEW PROJECT</button>
-              </div>
-            </div>
-
+            ))}
           </div>
         </section>
+
+        
+        <section id="education" className="education-section">
+          <h2 className="section-title">Education</h2>
+          <div className="education-card">
+            <div className="education-header">
+              <h3 className="institution">King Mongkut's Institute of Technology Ladkrabang</h3>
+              <span className="location">Bangkok, Thailand</span>
+            </div>
+            <p className="degree">School of Science in Computer Science, 2.96 GPA</p>
+            <p className="duration">2021 – Present</p>
+          </div>
+        </section>
+
       </main>
 
       <footer>

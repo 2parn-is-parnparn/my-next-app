@@ -17,8 +17,8 @@ export default function Home() {
           </button>
 
           <p id="projectcaption" className="bio">
-          A solo project focused on the history of coffee, designed as a practice in UI design using Figma. This project explores UX principles and interface aesthetics while presenting engaging content on coffee’s origins and evolution.
-          </p>
+          โปรเจกต์เดี่ยวในวิชา Human-Computer Interaction ที่มุ่งเน้นการออกแบบ UI ด้วย Figma ผ่านการนำเสนอประวัติและวิวัฒนาการของกาแฟ โดยเป็นการฝึกทักษะด้าน UX/UI Design และการสร้างอินเทอร์เฟซที่ดึงดูดและใช้งานง่าย
+</p>
         </div>
         <section id="about" className="hero">
           <section id="education" className="education-section">

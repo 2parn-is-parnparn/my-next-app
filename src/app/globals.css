@@ -27,7 +27,6 @@
   }
 } */
 
-/* Base Styles */
 body {
   color: var(--foreground);
   background: var(--background);
@@ -39,7 +38,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem; /* Account for fixed navbar when scrolling to sections */
+  scroll-padding-top: 6rem; 
 }
 
 .container {
@@ -53,7 +52,7 @@ main {
   padding-top: 6rem;
 }
 
-/* Section Title - Used across multiple sections */
+
 .section-title {
   font-size: 1.875rem;
   font-weight: 700;
@@ -62,7 +61,7 @@ main {
   border-bottom: 1px solid var(--foreground);
 }
 
-/* Hero Section */
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -96,10 +95,10 @@ main {
 .bio {
   font-size: 1.125rem;
   line-height: 1.6;
-  max-width: 35rem;
+  /* max-width: 35rem; */
 }
 
-/* Profile Image */
+
 .profile-container {
   position: relative;
 }
@@ -109,7 +108,7 @@ main {
   height: 240px;
   overflow: hidden;
   border-radius: 50%;
-  filter: grayscale(0%);
+  filter: grayscale(100%);
   border: 8px solid var(--background);
   box-shadow: 0 0 0 1px var(--foreground);
   transition: all 0.3s ease;
@@ -128,11 +127,11 @@ img {
 
 
 .myImage:hover {
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   transform: scale(1.03);
 }
 
-/* Education Section */
+
 .education-section {
   margin-bottom: 4rem;
   animation: fadeIn 0.8s ease forwards;
@@ -183,7 +182,7 @@ img {
   margin: 0.5rem 0;
 }
 
-/* Skills Section */
+
 .skills-section {
   margin-bottom: 4rem;
   animation: fadeIn 0.8s ease forwards;
@@ -250,7 +249,7 @@ img {
   transform: translateY(-2px);
 }
 
-/* Experience Section */
+
 .experience-section {
   margin-bottom: 4rem;
   animation: fadeIn 0.8s ease forwards;
@@ -311,7 +310,7 @@ img {
   line-height: 1.6;
 }
 
-/* Projects Section */
+
 .projects-section {
   margin-bottom: 4rem;
   animation: fadeIn 0.8s ease forwards;
@@ -326,7 +325,7 @@ img {
   animation-delay: 0.3s;
 }
 
-/* Project Cards */
+
 .myCard {
   position: relative;
   padding: 2.5rem;
@@ -388,7 +387,7 @@ img {
   color: var(--background);
 }
 
-/* Footer */
+
 footer {
   border-top: 1px solid var(--border-light);
   padding: 2.5rem 0;
@@ -400,13 +399,13 @@ footer p {
   color: var(--text-secondary);
 }
 
-/* Animations */
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Media Queries for Responsive Design */
+
 @media (min-width: 768px) {
   .hero {
     flex-direction: row;
@@ -436,11 +435,11 @@ footer p {
 
   .image-gallery {
     grid-template-columns: 1fr;
-    gap: 1.5rem; /* ระยะห่างระหว่างรูปภาพบนมือถือ */
+    gap: 1.5rem; 
   }
 }
 
-/* Navbar */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -533,7 +532,7 @@ video {
   color: var(--text-secondary);
 }
 
-/* Mobile menu toggle */
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -586,28 +585,27 @@ video {
   }
   
   .thumbnail {
-    max-width: 250px; /* ขนาดเล็กลงบนหน้าจอมือถือ */
+    max-width: 250px; 
   }
 }
 
-/* Image Gallery Styles */
 .image-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem; /* ระยะห่างระหว่างรูปภาพ - เพิ่มค่าให้มีระยะห่างมากขึ้น */
-  margin-bottom: 2rem; /* ระยะห่างด้านล่างของแกลเลอรี่ */
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 
 
 .thumbnail {
   width: 100%;
-  max-width: 150px; /* กำหนดขนาดสูงสุดของรูป */
+  max-width: 150px;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
   border-radius: 8px;
-  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+  margin: 0 auto;
 }
 
 
@@ -616,7 +614,6 @@ video {
   filter: brightness(1.1);
 }
 
-/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -667,4 +664,40 @@ video {
 @keyframes scaleIn {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+.tech-stack {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1rem;
+}
+
+.tech-stack-title {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-stack-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  background-color: var(--hover);
+  color: var(--foreground);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  border: 1px solid var(--border-light);
+  transition: all 0.2s ease;
+}
+
+.tech-badge:hover {
+  background-color: var(--foreground);
+  color: var(--background);
+  transform: translateY(-2px);
 }
