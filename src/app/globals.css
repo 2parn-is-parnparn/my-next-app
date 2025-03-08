@@ -600,7 +600,7 @@ video {
 
 .thumbnail {
   width: 100%;
-  max-width: 150px;
+  /* max-width: 150px; */
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease;
