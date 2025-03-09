@@ -94,6 +94,41 @@ export default function Home() {
 
 
 
+        <section id="projects" className="projects-section">
+          <h2 className="section-title">Academic Projects</h2>
+          <div className="projects-grid">
+            {projects.map((project, index) => (
+              <div key={index} className="myCard">
+                <div className="card-content">
+                  <h3 className="project-title">{project.title}</h3>
+                  <h4 className="project-subtitle">{project.subtitle}</h4>
+                  <div className="tech-stack">
+                    <div className="tech-stack-items">
+                      {project.mainTechStack.map((tech, techIndex) => (
+                        <span key={techIndex} className="tech-badge">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <p className="project-description">{project.mainDescription}</p>
+                  
+
+                  
+                  {project.hasDetailPage && (
+                    <button 
+                      className="myButton" 
+                      onClick={() => navigateTo(project.detailPath)}
+                    >
+                      VIEW PROJECT
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+
+
         <section id="skills" className="skills-section">
           <h2 className="section-title">Skills</h2>
           <div className="skills-container">
@@ -151,40 +186,6 @@ export default function Home() {
             </ul>
           </div>
         </section>
-
-        <section id="projects" className="projects-section">
-          <h2 className="section-title">Academic Projects</h2>
-          <div className="projects-grid">
-            {projects.map((project, index) => (
-              <div key={index} className="myCard">
-                <div className="card-content">
-                  <h3 className="project-title">{project.title}</h3>
-                  <h4 className="project-subtitle">{project.subtitle}</h4>
-                  <div className="tech-stack">
-                    <div className="tech-stack-items">
-                      {project.mainTechStack.map((tech, techIndex) => (
-                        <span key={techIndex} className="tech-badge">{tech}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <p className="project-description">{project.mainDescription}</p>
-                  
-
-                  
-                  {project.hasDetailPage && (
-                    <button 
-                      className="myButton" 
-                      onClick={() => navigateTo(project.detailPath)}
-                    >
-                      VIEW PROJECT
-                    </button>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         
         <section id="education" className="education-section">
           <h2 className="section-title">Education</h2>

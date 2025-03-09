@@ -96,6 +96,7 @@ export default function Home() {
         <section id="skills" className="skills-section">
           <h2 className="section-title">Impact-Effort
           Matrix</h2>
+          <img className="kinclean_img" src="impact.png" alt="" />
 
         </section>
 
