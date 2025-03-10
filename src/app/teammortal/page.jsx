@@ -24,9 +24,9 @@ export default function Home() {
           <h1 className="name">TEAM MORTAL</h1>
           <button
             className="myButton"
-            onClick={() => window.open("https://www.figma.com/proto/0nIr5HvG9aUX3AAfJfCXlI/HCI-Copy?node-id=72-18&p=f&t=dIubL3YZ0kn8mikk-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1230%3A13692", "_blank")}
+            onClick={() => window.open("https://maroon-helium-dda.notion.site/TEAM-MORTAL-1b2aa31ef795800bb6bfc6babbbcae39", "_blank")}
           >
-            VIEW PROTOTYPE
+            VIEW DETAIL
           </button>
 
           <p id="projectcaption" className="bio">
@@ -38,108 +38,7 @@ export default function Home() {
             <img src="kinclean1.png" alt="" />
           </section>
         </section>
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">การตั้งคำถาม
-          (Questions) สำหรับที่ใช้ในการสัมภาษณ์ (Interviews)</h2>
-
-          {/* แถวที่ 1 */}
-          <div className="image-row">
-            <div className="image-gallery">
-              <img
-                className="kinclean_img thumbnail"
-                src="q&a_page-0001.jpg"
-                alt="NudMhor app interface"
-                onClick={() => openModal("q&a_page-0001.jpg")}
-              />
-              <img
-                className="kinclean_img thumbnail"
-                src="q&a_page-0002.jpg"
-                alt="NudMhor app interface"
-                onClick={() => openModal("q&a_page-0002.jpg")}
-              />
-              <img
-                className="kinclean_img thumbnail"
-                src="q&a_page-0003.jpg"
-                alt="NudMhor app interface"
-                onClick={() => openModal("q&a_page-0003.jpg")}
-              />
-            </div>
-          </div>
-
-        </section>
-
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">Emphaty Map</h2>
-          <img className="kinclean_img" src="empathy_map.png" alt="" />
-
-        </section>
-
-
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">Value Proposition Canvas (VPC)</h2>
-          <img className="kinclean_img" src="VPC.png" alt="" />
-
-        </section>
         
-
-        
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">Persona</h2>
-
-        </section>
-
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">Customer Journey / User Journey</h2>
-
-        </section>
-
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">Impact-Effort
-          Matrix</h2>
-          <img className="kinclean_img" src="impact.png" alt="" />
-
-        </section>
-
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">IA –
-          Information Architecture</h2>
-
-        </section>
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">
-          Wireframe</h2>
-
-        </section>
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">
-          Mockup</h2>
-
-        </section>
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">
-          Design System / Design Token</h2>
-
-        </section>
-
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">
-          UI Design & Prototype</h2>
-
-        </section>
-
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">
-          Script
-Usability Testing</h2>
-
-        </section>
-
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">
-          Usability
-          Testing</h2>
-
-        </section>
       </main>
 
             {/* Image Modal */}

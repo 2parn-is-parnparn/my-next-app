@@ -17,7 +17,8 @@ export default function Home() {
           </button>
 
           <p id="projectcaption" className="bio">
-            "กินคลีนกัน" เป็นเว็บไซต์ที่ออกแบบมาเพื่อช่วยให้ผู้ใช้เข้าถึงข้อมูลเกี่ยวกับการกินอาหารคลีนได้ง่ายขึ้น โดยนำหลักการ Human-Computer Interaction (HCI) มาประยุกต์ใช้เพื่อสร้างประสบการณ์การใช้งานที่สะดวกและเป็นมิตรกับผู้ใช้ ภายในเว็บไซต์มีฟีเจอร์ที่ช่วยแนะนำเมนูอาหารคลีน สูตรทำอาหาร คำนวณแคลอรี่อัตโนมัติ และวางแผนมื้ออาหารตามเป้าหมายสุขภาพ การออกแบบทั้งหมดพัฒนาโดยใช้ Figma เพื่อให้สามารถสร้างต้นแบบ (Prototype) และทดสอบการใช้งานจริงก่อนพัฒนาเว็บไซต์จริงต่อไป
+          "กินคลีนกัน" เป็นเว็บไซต์ที่ออกแบบมาเพื่อช่วยให้ผู้ใช้เข้าถึงข้อมูลเกี่ยวกับการกินอาหารคลีนได้ง่ายและสะดวกขึ้น โดยนำหลักการ Human-Computer Interaction (HCI) มาประยุกต์ใช้เพื่อสร้างประสบการณ์การใช้งานที่เป็นมิตรกับผู้ใช้ ทั้งหมดถูกออกแบบด้วย Figma เพื่อสร้างต้นแบบ (Prototype) และทดสอบการใช้งานจริงก่อนนำไปพัฒนาเป็นเว็บไซต์สมบูรณ์
+
           </p>
         </div>
         <section id="about" className="hero">
@@ -27,7 +28,7 @@ export default function Home() {
         </section>
 
         <section id="skills" className="skills-section">
-          <h2 className="section-title">Animated Preview</h2>
+          <h2 className="section-title">UI Animation Showcase</h2>
           <img className="kinclean_img" src="kinclean1.gif" alt="" />
           {/* <video src="kinclean_video.mp4" autoPlay muted loop playsinline></video> */}
 

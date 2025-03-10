@@ -108,7 +108,7 @@ main {
   height: 240px;
   overflow: hidden;
   border-radius: 50%;
-  filter: grayscale(100%);
+  filter: grayscale(0%);
   border: 8px solid var(--background);
   box-shadow: 0 0 0 1px var(--foreground);
   transition: all 0.3s ease;

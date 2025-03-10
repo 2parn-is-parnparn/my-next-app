@@ -25,7 +25,7 @@ export default function Home() {
     {
       title: "ARTTROVERT",
       subtitle: "INTERACTIVE SYSTEMS PROJECT",
-      mainDescription: "Art marketplace designed through UX research, competitive analysis, and Figma prototyping to enhance user engagement",
+      mainDescription: "An art marketplace crafted through UX research, competitive analysis, and Figma prototyping to maximize user engagement.",
       detailPath: "/arttrovert",
       mainTechStack: ["Figma", "Prototyping","UI Design"],
       hasDetailPage: true
@@ -34,7 +34,7 @@ export default function Home() {
     {
       title: "กินคลีนกัน",
       subtitle: "HUMAN-COMPUTER INTERACTION GROUP PROJECT",
-      mainDescription: "Clean eating website designed with Figma, focusing on user-friendly UI/UX and interactive meal planning for a healthier lifestyle",
+      mainDescription: "A clean eating website designed with Figma, emphasizing user-friendly UI/UX and interactive meal planning to promote a healthier lifestyle.",
       detailPath: "/kinclean",
       mainTechStack: ["Figma", "UI Design","Prototyping"],
       hasDetailPage: true

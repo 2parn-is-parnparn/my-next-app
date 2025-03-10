@@ -28,11 +28,11 @@ export default function Home() {
           <div className="hero-content">
             <h1 className="name">Arttrovert</h1>
             <p className="bio">
-            Art marketplace designed through UX research, competitive analysis, and Figma prototyping to enhance user engagement
+            ตลาดซื้อขายงานศิลปะที่พัฒนาขึ้นผ่านการวิจัย UX, การวิเคราะห์คู่แข่ง และการสร้างต้นแบบด้วย Figma เพื่อเพิ่มการมีส่วนร่วมของผู้ใช้สูงสุด
             </p>
             <button
             className="myButton"
-            onClick={() => window.open("https://www.figma.com/proto/jC7unMWIHdvtj7sEXv3H4h/goodart?node-id=0-1&p=f&t=JRaLAdbucMrJzC2t-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=493%3A2729&show-proto-sidebar=1", "_blank")}
+            onClick={() => window.open("https://www.figma.com/proto/jC7unMWIHdvtj7sEXv3H4h/goodart?node-id=493-2729&p=f&t=JRaLAdbucMrJzC2t-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=493%3A2729", "_blank")}
           >
             VIEW PROTOTYPE
           </button>
@@ -43,10 +43,12 @@ export default function Home() {
         </section>
 
         <section id="skills" className="skills-section">
-  <h2 className="section-title">App Interface Preview</h2>
-  
-  
-</section>
+          <h2 className="section-title">UI Animation Showcase</h2>
+          <img className="kinclean_img" src="arttrovert.gif" alt="" />
+          {/* <video src="kinclean_video.mp4" autoPlay muted loop playsinline></video> */}
+
+
+        </section>
 
       </main>
 
