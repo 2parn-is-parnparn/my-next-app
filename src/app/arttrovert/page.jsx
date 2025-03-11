@@ -7,8 +7,8 @@ import Link from 'next/link';
 
 export default function Home() {
 
-    const [showModal, setShowModal] = useState(false);
-    const [currentImage, setCurrentImage] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [currentImage, setCurrentImage] = useState("");
 
   const openModal = (imageSrc) => {
     setCurrentImage(imageSrc);
@@ -23,23 +23,24 @@ export default function Home() {
     <div className="container">
       <Navbar />
       <main>
+        
         <section id="about" className="hero">
 
           <div className="hero-content">
             <h1 className="name">Arttrovert</h1>
             <p className="bio">
-            ตลาดซื้อขายงานศิลปะที่พัฒนาขึ้นผ่านการวิจัย UX, การวิเคราะห์คู่แข่ง และการสร้างต้นแบบด้วย Figma เพื่อเพิ่มการมีส่วนร่วมของผู้ใช้สูงสุด
+              Designed a website for buying and selling artwork.
             </p>
             <button
-            className="myButton"
-            onClick={() => window.open("https://www.figma.com/proto/jC7unMWIHdvtj7sEXv3H4h/goodart?node-id=493-2729&p=f&t=JRaLAdbucMrJzC2t-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=493%3A2729", "_blank")}
-          >
-            VIEW PROTOTYPE
-          </button>
+              className="myButton"
+              onClick={() => window.open("https://www.figma.com/proto/jC7unMWIHdvtj7sEXv3H4h/goodart?node-id=493-2729&p=f&t=JRaLAdbucMrJzC2t-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=493%3A2729", "_blank")}
+            >
+              VIEW PROTOTYPE
+            </button>
           </div>
-                  <section id="education" className="education-section">
+          <section id="education" className="education-section">
             <img src="arttrovert1.png" alt="" />
-        </section>
+          </section>
         </section>
 
         <section id="skills" className="skills-section">
@@ -52,8 +53,8 @@ export default function Home() {
 
       </main>
 
-       {/* Image Modal */}
-       {showModal && (
+      {/* Image Modal */}
+      {showModal && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={closeModal}>×</button>

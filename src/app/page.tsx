@@ -9,17 +9,23 @@ export default function Home() {
 
   const navigateTo = (path?: string) => {
     if (path) {
+      router.push(path);
+    }
+  };
+
+  const navigateTo_ = (path?: string) => {
+    if (path) {
       window.open(path, "_blank");
     }
   };
-  
+
   const projects = [
     {
       title: "TEAMMORTAL",
       subtitle: "SOFTWARE DESIGN PROJECT",
       mainDescription: "Designed and developed a website to help users find gaming partners, connecting them with others who share similar interests and lifestyles..",
       detailPath: "https://maroon-helium-dda.notion.site/TEAM-MORTAL-1b2aa31ef795800bb6bfc6babbbcae39",
-      mainTechStack: ["Designing Interactive Systems","Software Design","Mini Project"],
+      mainTechStack: ["Designing Interactive Systems", "Software Design", "Mini Project"],
       hasDetailPage: true
     },
     {
@@ -32,7 +38,7 @@ export default function Home() {
     },
 
     {
-      title: "กินคลีนกัน",
+      title: "KINCLEAN",
       subtitle: "HUMAN-COMPUTER INTERACTION GROUP PROJECT",
       mainDescription: "Designed a website for selling clean food with a delivery service.",
       detailPath: "/kinclean",
@@ -87,7 +93,7 @@ export default function Home() {
           <div className="hero-content">
             <h1 className="name">Narin Dapradit</h1>
             <p className="bio">
-            I'm passionate about UX/UI and software design, dedicated to enhancing my skills in crafting user-friendly, intuitive, and visually appealing digital experiences. I thrive on collaboration, exchanging ideas, and exploring innovative ways to design software that effectively meets user needs.            </p>
+              I'm passionate about UX/UI and software design, dedicated to enhancing my skills in crafting user-friendly, intuitive, and visually appealing digital experiences. I thrive on collaboration, exchanging ideas, and exploring innovative ways to design software that effectively meets user needs.            </p>
           </div>
         </section>
 
@@ -109,17 +115,22 @@ export default function Home() {
                     </div>
                   </div>
                   <p className="project-description">{project.mainDescription}</p>
-                  
 
-                  
+
+
                   {project.hasDetailPage && (
-                    <button 
-                      className="myButton" 
-                      onClick={() => navigateTo(project.detailPath)}
+                    <button
+                      className="myButton"
+                      onClick={() =>
+                        project.title === "TEAMMORTAL"
+                          ? navigateTo_(project.detailPath)
+                          : navigateTo(project.detailPath)
+                      }
                     >
                       VIEW PROJECT
                     </button>
                   )}
+
                 </div>
               </div>
             ))}
@@ -188,7 +199,7 @@ export default function Home() {
             </ul>
           </div>
         </section>
-        
+
         <section id="education" className="education-section">
           <h2 className="section-title">Education</h2>
           <div className="education-card">
