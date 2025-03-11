@@ -36,7 +36,7 @@ export default function Home() {
       subtitle: "HUMAN-COMPUTER INTERACTION GROUP PROJECT",
       mainDescription: "Designed a website for selling clean food with a delivery service.",
       detailPath: "/kinclean",
-      mainTechStack: ["Figma", "UI Design","Prototyping"],
+      mainTechStack: ["HUMAN-COMPUTER INTERACTION"],
       hasDetailPage: true
     },
     {
@@ -52,7 +52,7 @@ export default function Home() {
       subtitle: "HUMAN-COMPUTER INTERACTION INDIVIDUAL PROJECT",
       mainDescription: "Designed a website to showcase the history and evolution of coffee.",
       detailPath: "/espressoul",
-      mainTechStack: ["Figma",  "UI Design","Prototyping"],
+      mainTechStack: ["HUMAN-COMPUTER INTERACTION"],
       hasDetailPage: true,
     },
     {
