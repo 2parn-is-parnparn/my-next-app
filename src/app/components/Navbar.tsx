@@ -96,10 +96,12 @@ export default function Navbar({ currentPageName }: NavbarProps) {
         </div>
         <ul className="navbar-menu" ref={navbarMenuRef}>
           <li><Link href="/" onClick={closeMenu}>Home</Link></li>
-          <li><Link href="/#education" onClick={closeMenu}>Education</Link></li>
-          <li><Link href="/#experience" onClick={closeMenu}>Experience</Link></li>
           <li><Link href="/#projects" onClick={closeMenu}>Projects</Link></li>
           <li><Link href="/#skills" onClick={closeMenu}>Skills</Link></li>
+          <li><Link href="/#experience" onClick={closeMenu}>Experience</Link></li>
+          <li><Link href="/#education" onClick={closeMenu}>Education</Link></li>
+
+
         </ul>
       </div>
     </nav>

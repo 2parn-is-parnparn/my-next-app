@@ -17,24 +17,24 @@ export default function Home() {
     {
       title: "TEAMMORTAL",
       subtitle: "SOFTWARE DESIGN PROJECT",
-      mainDescription: "Gamer matchmaking platform built with React.js/Node.js; implemented UX/UI design principles and comprehensive software documentation",
+      mainDescription: "Designed and developed a website to help users find gaming partners, connecting them with others who share similar interests and lifestyles..",
       detailPath: "/teammortal",
-      mainTechStack: ["React.js", "Node.js", "UI Design", "UX Research","Figma", "Prototyping"],
+      mainTechStack: ["Designing Interactive Systems","Software Design","Mini Project"],
       hasDetailPage: true
     },
     {
       title: "ARTTROVERT",
       subtitle: "INTERACTIVE SYSTEMS PROJECT",
-      mainDescription: "An art marketplace crafted through UX research, competitive analysis, and Figma prototyping to maximize user engagement.",
+      mainDescription: "Designed a website for buying and selling artwork.",
       detailPath: "/arttrovert",
-      mainTechStack: ["Figma", "Prototyping","UI Design"],
+      mainTechStack: ["Designing Interactive Systems"],
       hasDetailPage: true
     },
 
     {
       title: "กินคลีนกัน",
       subtitle: "HUMAN-COMPUTER INTERACTION GROUP PROJECT",
-      mainDescription: "A clean eating website designed with Figma, emphasizing user-friendly UI/UX and interactive meal planning to promote a healthier lifestyle.",
+      mainDescription: "Designed a website for selling clean food with a delivery service.",
       detailPath: "/kinclean",
       mainTechStack: ["Figma", "UI Design","Prototyping"],
       hasDetailPage: true
@@ -42,15 +42,15 @@ export default function Home() {
     {
       title: "NudMhor",
       subtitle: "ANDROID MOBILE APPLICATION GROUP PROJECT",
-      mainDescription: "Mobile application designed in Figma with a focus on user experience and interface design",
+      mainDescription: "Designed a mobile application for reporting symptoms and scheduling doctor appointments in advance.",
       detailPath: "/nudmhor",
-      mainTechStack: ["Android", "UI Design","Prototyping"],
+      mainTechStack: ["ANDROID MOBILE APPLICATION PROGRAMMING"],
       hasDetailPage: true,
     },
     {
       title: "Espressoul",
       subtitle: "HUMAN-COMPUTER INTERACTION INDIVIDUAL PROJECT",
-      mainDescription: "Designed in Figma with a focus on user experience and interface design",
+      mainDescription: "Designed a website to showcase the history and evolution of coffee.",
       detailPath: "/espressoul",
       mainTechStack: ["Figma",  "UI Design","Prototyping"],
       hasDetailPage: true,
@@ -58,16 +58,16 @@ export default function Home() {
     {
       title: "MEDISCAN",
       subtitle: "AI COURSE PROJECT",
-      mainDescription: "AI-powered medicine recognition system using YOLO, LINE API, and Dialogflow for medication identification and information retrieval",
-      mainTechStack: ["YOLO", "Python", "LINE API"],
+      mainDescription: "Developed an AI-powered system for scanning drug types, providing information on their properties, and recording alerts via Line.",
+      mainTechStack: ["AI"],
       hasDetailPage: false,
       detailPath: undefined
     },
     {
       title: "BOTTLE BANK",
       subtitle: "IOT IMPLEMENTATION PROJECT",
-      mainDescription: "Smart recycling machine integrating Arduino sensors, web application, and Firebase for real-time monitoring and data collection",
-      mainTechStack: ["Arduino", "Firebase", "IoT"],
+      mainDescription: "Developed a plastic bottle and can collection kiosk using Arduino for control, integrated AI for sorting, and created a web application to manage the system.",
+      mainTechStack: ["PRINCIPLE OF INTERNET OF THINGS IMPLEMENTATION"],
       hasDetailPage: false,
       detailPath: undefined
     },
@@ -87,21 +87,20 @@ export default function Home() {
           <div className="hero-content">
             <h1 className="name">Narin Dapradit</h1>
             <p className="bio">
-              I'm passionate about UX/UI design and software design. I'm committed to improving my skills in creating user-friendly, intuitive, and visually appealing digital experiences. I enjoy collaborating with others, sharing ideas, and discussing ways to design software that effectively meets user needs.
-            </p>
+            I'm passionate about UX/UI and software design, dedicated to enhancing my skills in crafting user-friendly, intuitive, and visually appealing digital experiences. I thrive on collaboration, exchanging ideas, and exploring innovative ways to design software that effectively meets user needs.            </p>
           </div>
         </section>
 
 
 
         <section id="projects" className="projects-section">
-          <h2 className="section-title">Academic Projects</h2>
+          <h2 className="section-title">Projects</h2>
           <div className="projects-grid">
             {projects.map((project, index) => (
               <div key={index} className="myCard">
                 <div className="card-content">
                   <h3 className="project-title">{project.title}</h3>
-                  <h4 className="project-subtitle">{project.subtitle}</h4>
+                  {/* <h4 className="project-subtitle">{project.subtitle}</h4> */}
                   <div className="tech-stack">
                     <div className="tech-stack-items">
                       {project.mainTechStack.map((tech, techIndex) => (
