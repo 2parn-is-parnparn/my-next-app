@@ -86,7 +86,7 @@ export default function Home() {
         <section id="about" className="hero">
           <div className="profile-container">
             <div className="myImage">
-              <img src="/profile.jpg" alt="Profile" />
+              <img src="/profile1.jpg" alt="Profile" />
             </div>
           </div>
 
