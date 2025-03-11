@@ -26,7 +26,7 @@ export default function Home() {
             className="myButton"
             onClick={() => window.open("https://maroon-helium-dda.notion.site/TEAM-MORTAL-1b2aa31ef795800bb6bfc6babbbcae39", "_blank")}
           >
-            VIEW DETAIL
+            VIEW PROJECT DETAIL
           </button>
 
           <p id="projectcaption" className="bio">
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
         <section id="about" className="hero">
           <section id="education" className="education-section">
-            <img src="kinclean1.png" alt="" />
+            <img src="teammortal.png" alt="" />
           </section>
         </section>
         

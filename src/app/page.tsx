@@ -9,16 +9,16 @@ export default function Home() {
 
   const navigateTo = (path?: string) => {
     if (path) {
-      router.push(path);
+      window.open(path, "_blank");
     }
   };
-
+  
   const projects = [
     {
       title: "TEAMMORTAL",
       subtitle: "SOFTWARE DESIGN PROJECT",
       mainDescription: "Designed and developed a website to help users find gaming partners, connecting them with others who share similar interests and lifestyles..",
-      detailPath: "/teammortal",
+      detailPath: "https://maroon-helium-dda.notion.site/TEAM-MORTAL-1b2aa31ef795800bb6bfc6babbbcae39",
       mainTechStack: ["Designing Interactive Systems","Software Design","Mini Project"],
       hasDetailPage: true
     },
@@ -135,15 +135,17 @@ export default function Home() {
               <h3 className="skills-category-title">Hard Skills</h3>
               <ul className="skills-list">
                 <li>Figma</li>
-                <li>Adobe Photoshop</li>
-                <li>Usability Testing</li>
-                <li>Persona Creation</li>
-                <li>Journey Mapping</li>
-                <li>Interactive Prototypes</li>
                 <li>Wireframing</li>
-                <li>User Flow Diagrams</li>
-                <li>HTML/CSS</li>
+                <li>Prototyping</li>
+                <li>Interaction Design</li>
+                <li>Adobe Photoshop</li>
+                <li>Python</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node.Js</li>
                 <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
               </ul>
             </div>
 
@@ -152,8 +154,8 @@ export default function Home() {
               <ul className="skills-list">
                 <li>Team Collaboration</li>
                 <li>Effective Communication</li>
-                <li>Project Management</li>
-                <li>Creative Problem-Solving</li>
+                <li>Receiving Feedback</li>
+                <li>Responsibility</li>
               </ul>
             </div>
           </div>
@@ -177,11 +179,12 @@ export default function Home() {
 
             <h4 className="project-name">Machine Learning-Based Issue Detection in Jenkins Pipeline</h4>
             <ul className="responsibilities">
-              <li>Developed an ML-powered system to analyze and predict issues in CI/CD pipelines using Jenkins logs</li>
-              <li>Built predictive models with Python, scikit-learn, and Jupyter Notebook</li>
-              <li>Explored and implemented Docker, Kubernetes (EKS), and AWS (EC2, S3) for deployment and scalability</li>
-              <li>Integrated MongoDB and AWS DocumentDB for log storage and processing</li>
-              <li>Created a Next.js-based web dashboard to display predictions, statistics, and troubleshooting recommendations</li>
+              <li>Developed a machine learning-powered system to analyze and predict issues within CI/CD pipelines by leveraging Jenkins logs.</li>
+              <li>Built and trained predictive models using Python, scikit-learn, and Jupyter Notebook for efficient analysis.</li>
+              <li>Implemented Docker, Kubernetes (EKS), and AWS (EC2, S3)</li>
+              <li>Integrated MongoDB and AWS DocumentDB for robust log storage and real-time processing.</li>
+              <li>Utilized Node.js as the backend to manage data in MongoDB and Kubernetes, facilitating the training of predictive models and storing prediction results for web display.</li>
+              <li>Created an intuitive web dashboard with Next.js to display prediction results, system statistics, and troubleshooting recommendations for enhanced user experience and decision-making.</li>
             </ul>
           </div>
         </section>
