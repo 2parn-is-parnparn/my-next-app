@@ -86,14 +86,14 @@ export default function Home() {
         <section id="about" className="hero">
           <div className="profile-container">
             <div className="myImage">
-              <img src="/profile1.jpg" alt="Profile" />
+              <img src="/profile.jpg" alt="Profile" />
             </div>
           </div>
 
           <div className="hero-content">
             <h1 className="name">Narin Dapradit</h1>
             <p className="bio">
-              I'm passionate about UX/UI and software design, dedicated to enhancing my skills in crafting user-friendly, intuitive, and visually appealing digital experiences. I thrive on collaboration, exchanging ideas, and exploring innovative ways to design software that effectively meets user needs.            </p>
+            Hi, I'm Narin. I'm passionate about creating products that truly connect with users. Whether I'm designing interfaces or writing code, I always start by understanding what users really need. To me, good products aren't just functional—they solve real problems and deliver great experiences. I enjoy the challenge of translating user needs into intuitive designs and reliable solutions that make a genuine difference.            </p>
           </div>
         </section>
 
@@ -165,7 +165,7 @@ export default function Home() {
               <ul className="skills-list">
                 <li>Team Collaboration</li>
                 <li>Effective Communication</li>
-                <li>Receiving Feedback</li>
+                <li>Emotional Intelligence (EQ) and Empathy </li>
                 <li>Responsibility</li>
               </ul>
             </div>
