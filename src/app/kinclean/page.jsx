@@ -28,11 +28,19 @@ export default function Home() {
             <img src="kinclean1.png" alt="" />
           </section>
         </section>
+        <img src="kinclean_poster.png" alt="" />
 
         <section id="skills" className="skills-section">
           <h2 className="section-title">UI Animation Showcase</h2>
-          <img className="kinclean_img" src="kinclean1.gif" alt="" />
+          {/* <img className="kinclean_img" src="kinclean1.gif" alt="" /> */}
           {/* <video src="kinclean_video.mp4" autoPlay muted loop playsinline></video> */}
+          <video autoPlay loop muted playsInline>
+      <source 
+        src="/KinClean_UI_Animation_Showcase.mp4"
+        type="video/mp4" 
+      />
+      Your browser does not support the video tag.
+    </video>
 
 
         </section>

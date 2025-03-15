@@ -26,8 +26,11 @@ export default function Home() {
           </section>
         </section>
 
+        
+        <img src="espressoul_poster.png" alt="" />
+
         <section id="skills" className="skills-section">
-          <h2 className="section-title">Animated Preview</h2>
+          <h2 className="section-title">UI Animation Showcase</h2>
           <img className="kinclean_img" src="espressoul.gif" alt="" />
           {/* <video src="kinclean_video.mp4" autoPlay muted loop playsinline></video> */}
 

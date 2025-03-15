@@ -43,6 +43,8 @@ export default function Home() {
           </section>
         </section>
 
+        <img src="arttrovert_poster.png" alt="" />
+
         <section id="skills" className="skills-section">
           <h2 className="section-title">UI Animation Showcase</h2>
           {/* <img className="kinclean_img" src="arttrovert.gif" alt="" /> */}
