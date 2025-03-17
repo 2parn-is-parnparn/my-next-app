@@ -46,7 +46,7 @@ export default function Home() {
           {/* <img className="kinclean_img" src="arttrovert.gif" alt="" /> */}
           <video autoPlay loop muted playsInline>
       <source 
-        src="/Teammortal_UI_Animation_Showcase.mkv"
+        src="/Teammortal_UI_Animation_Showcase.mp4"
         type="video/mp4" 
       />
       Your browser does not support the video tag.
