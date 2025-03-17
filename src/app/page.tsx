@@ -23,8 +23,8 @@ export default function Home() {
     {
       title: "TEAMMORTAL",
       subtitle: "SOFTWARE DESIGN PROJECT",
-      mainDescription: "Designed and developed a website to help users find gaming partners, connecting them with others who share similar interests and lifestyles..",
-      detailPath: "https://maroon-helium-dda.notion.site/TEAM-MORTAL-1b2aa31ef795800bb6bfc6babbbcae39",
+      mainDescription: "Designed and developed a website using React, Node.js, and MongoDB to help users find gaming partners, connecting them with others who share similar interests and lifestyles.",
+      detailPath: "/teammortal",
       mainTechStack: ["Designing Interactive Systems", "Software Design", "Mini Project"],
       hasDetailPage: true
     },
@@ -123,7 +123,7 @@ export default function Home() {
                       className="myButton"
                       onClick={() =>
                         project.title === "TEAMMORTAL"
-                          ? navigateTo_(project.detailPath)
+                          ? navigateTo(project.detailPath)
                           : navigateTo(project.detailPath)
                       }
                     >
