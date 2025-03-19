@@ -25,7 +25,7 @@ export default function Home() {
       subtitle: "SOFTWARE DESIGN PROJECT",
       mainDescription: "Designed and developed a website using React, Node.js, and MongoDB to help users find gaming partners, connecting them with others who share similar interests and lifestyles.",
       detailPath: "/teammortal",
-      mainTechStack: ["Designing Interactive Systems", "Software Design", "Mini Project"],
+      mainTechStack: ["Software Design", "Mini Project"],
       hasDetailPage: true
     },
     {

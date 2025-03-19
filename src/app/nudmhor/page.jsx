@@ -36,19 +36,15 @@ export default function Home() {
             VIEW PROTOTYPE
           </button>
         </div>
-        <section id="about" className="hero">
 
+        <section id="skills" className="skills-section">
+          <h2 className="section-title">App Interface Preview</h2>
           <img
             className=""
             src="nudmhor1.png"
             alt="NudMhor app interface"
           />
-        </section>
-
-        <section id="skills" className="skills-section">
-          <h2 className="section-title">App Interface Preview</h2>
-
-          {/* แถวที่ 1 */}
+          {/* แถวที่ 1
           <div className="image-row">
             <div className="image-gallery">
               <img
@@ -80,9 +76,10 @@ export default function Home() {
                 onClick={() => openModal("nudmhor6.png")}
               />
             </div>
-          </div>
+          </div> */}
 
         </section>
+      
       </main>
 
       {/* Image Modal */}
