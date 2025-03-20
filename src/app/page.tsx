@@ -1,11 +1,27 @@
 "use client";
 import Navbar from "@/app/components/Navbar";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 
 export default function Home() {
 
   const router = useRouter();
+
+  useEffect(() => {
+    const logVisit = async () => {
+      await fetch("/api/logs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ip: "0.0.0.0", // หรือให้ Backend ดึง IP จริง
+          userAgent: navigator.userAgent,
+        }),
+      });
+    };
+
+    logVisit();
+  }, []);
 
   const navigateTo = (path?: string) => {
     if (path) {
