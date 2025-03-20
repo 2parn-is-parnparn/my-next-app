@@ -18,8 +18,12 @@ if (!mongoose.connections[0].readyState) {
 const visitorSchema = new mongoose.Schema({
   ip: String,
   userAgent: String,
-  timestamp: { type: Date, default: Date.now },
+  timestamp: { 
+    type: String, 
+    default: () => new Date().toLocaleString("th-TH", { timeZone: "Asia/Bangkok" })
+  },
 });
+
 
 const Visitor = mongoose.models.Visitor || mongoose.model("Visitor", visitorSchema, "visitors_collection");
 
