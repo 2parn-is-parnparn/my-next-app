@@ -196,12 +196,11 @@ export default function Home() {
 
             <h4 className="project-name">Machine Learning-Based Issue Detection in Jenkins Pipeline</h4>
             <ul className="responsibilities">
-              <li>Developed a machine learning-powered system to analyze and predict issues within CI/CD pipelines by leveraging Jenkins logs.</li>
-              <li>Built and trained predictive models using Python, scikit-learn, and Jupyter Notebook for efficient analysis.</li>
-              <li>Implemented Docker, Kubernetes (EKS), and AWS (EC2, S3)</li>
-              <li>Integrated MongoDB and AWS DocumentDB for robust log storage and real-time processing.</li>
-              <li>Utilized Node.js as the backend to manage data in MongoDB and Kubernetes, facilitating the training of predictive models and storing prediction results for web display.</li>
-              <li>Created an intuitive web dashboard with Next.js to display prediction results, system statistics, and troubleshooting recommendations for enhanced user experience and decision-making.</li>
+              <li>Worked on a machine learning-based system to predict CI/CD pipeline issues by analyzing Jenkins logs.</li>
+              <li>Developed predictive models using Python, scikit-learn, and Jupyter Notebook to detect error patterns and enhance pipeline efficiency.</li>
+              <li>Explored and contributed to scalable, containerized architecture using Docker & Kubernetes (EKS) on AWS.</li>
+              <li>Designed the data storage structure using MongoDB and developed backend services with Node.js.</li>
+              <li>Built and implemented a real-time monitoring dashboard with Next.js, improving troubleshooting efficiency for DevOps teams.</li>
             </ul>
           </div>
         </section>
