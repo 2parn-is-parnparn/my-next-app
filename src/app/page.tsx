@@ -93,7 +93,13 @@ export default function Home() {
           <div className="hero-content">
             <h1 className="name">Narin Dapradit</h1>
             <p className="bio">
-            Hi, I'm Narin. I'm passionate about creating products that truly connect with users. Whether I'm designing interfaces or writing code, I always start by understanding what users really need. To me, good products aren't just functional—they solve real problems and deliver great experiences. I enjoy the challenge of translating user needs into intuitive designs and reliable solutions that make a genuine difference.            </p>
+              Hi, I'm Narin. I'm passionate about creating products that truly connect with users. Whether I'm designing interfaces or writing code, I always start by understanding what users really need. To me, good products aren't just functional—they solve real problems and deliver great experiences. I enjoy the challenge of translating user needs into intuitive designs and reliable solutions that make a genuine difference.
+            </p>
+            <div className="contact-info">
+              <p><span className="contact-label">Email:</span> narindapradit.parnparn@gmail.com</p>
+              <p><span className="contact-label">Phone:</span> +66 62 2134 6238</p>
+              <p><span className="contact-label">LinkedIn:</span> <a href="https://linkedin.com/in/narindapradit" target="_blank" rel="noopener noreferrer">linkedin.com/in/narindapradit</a></p>
+            </div>
           </div>
         </section>
 

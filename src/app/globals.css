@@ -701,3 +701,30 @@ video {
   color: var(--background);
   transform: translateY(-2px);
 }
+.contact-info {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-label {
+  font-weight: 600;
+  min-width: 80px;
+  display: inline-block;
+}
+
+.contact-info a {
+  color: var(--foreground);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+  color: var(--text-secondary);
+}
